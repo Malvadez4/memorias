@@ -1,23 +1,27 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Minha trajetória escolar</title>
 
+    <!-- CSS na mesma pasta do HTML -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- MENU -->
     <header>
         <nav class="navbar">
             <h2>Minha História</h2>
 
             <ul>
                 <li><a href="#inicio">Início</a></li>
+                <li><a href="#historia">História</a></li>
                 <li><a href="#memorias">Memórias</a></li>
                 <li><a href="#redacoes">Redações</a></li>
                 <li><a href="#final">Encerramento</a></li>
@@ -27,8 +31,11 @@
 
     <main>
 
+        <!-- INÍCIO -->
         <section class="hero" id="inicio">
+
             <div class="hero-content">
+
                 <p class="tag">MINHA TRAJETÓRIA</p>
 
                 <h1>Minha trajetória escolar</h1>
@@ -38,18 +45,27 @@
                     que marcaram minha vida até o final do Ensino Médio.
                 </p>
 
-                <a href="#memorias" class="btn">
-                    Conhecer minhas memórias
+                <a href="#historia" class="btn">
+                    Conhecer minha história
                 </a>
+
             </div>
+
         </section>
 
+        <!-- HISTÓRIA ESCOLAR -->
         <section class="section" id="historia">
+
             <h2>Minha história na escola</h2>
+
+            <p class="section-description">
+                Cada etapa da escola fez parte da pessoa que sou hoje.
+            </p>
 
             <div class="timeline">
 
                 <div class="timeline-item">
+
                     <span>1º ao 5º ano</span>
 
                     <h3>Escola Maringá</h3>
@@ -58,27 +74,38 @@
                         Foi na Escola Maringá que passei os primeiros
                         anos do Ensino Fundamental. Não lembro de todos
                         os detalhes dessa época, mas ela fez parte do
-                        começo da minha caminhada escolar.
+                        começo da minha caminhada escolar, com
+                        aprendizados, descobertas e experiências
+                        que ajudaram na minha formação.
                     </p>
+
                 </div>
 
                 <div class="timeline-item">
+
                     <span>6º ano ao 3º ano</span>
 
                     <h3>Colégio Estadual Padre Cláudio Morelli</h3>
 
                     <p>
-                        No Morelli vivi uma parte muito importante da
-                        minha vida. Foi onde fiz amizades, passei por
-                        momentos engraçados, participei de passeios e
-                        construí lembranças que vou levar comigo.
+                        No Morelli vivi uma parte muito importante
+                        da minha vida. Foi onde fiz amizades, passei
+                        por momentos engraçados, participei de passeios
+                        e construí lembranças que vou levar comigo.
+                        Durante esses anos, aprendi não só conteúdos
+                        escolares, mas também a conviver com pessoas
+                        diferentes e a lidar com novas experiências.
                     </p>
+
                 </div>
 
             </div>
+
         </section>
 
+        <!-- MEMÓRIAS -->
         <section class="section" id="memorias">
+
             <h2>Memórias escolares</h2>
 
             <p class="section-description">
@@ -88,33 +115,68 @@
             <div class="memory-grid">
 
                 <div class="memory-card">
-                    <img src="assets/escola.jpg" alt="Memória da escola">
-                    <h3>Meus primeiros anos</h3>
-                    <p>O começo de uma grande caminhada.</p>
+
+                    <img
+                        src="assets/escola.jpg"
+                        alt="Memória dos primeiros anos escolares"
+                    >
+
+                    <div class="memory-info">
+                        <h3>Meus primeiros anos</h3>
+                        <p>O começo de uma grande caminhada.</p>
+                    </div>
+
                 </div>
 
                 <div class="memory-card">
-                    <img src="assets/infancia.jpg" alt="Memória da infância">
-                    <h3>Infância</h3>
-                    <p>Momentos simples que se tornaram especiais.</p>
+
+                    <img
+                        src="assets/infancia.jpg"
+                        alt="Memória da infância"
+                    >
+
+                    <div class="memory-info">
+                        <h3>Infância</h3>
+                        <p>Momentos simples que se tornaram especiais.</p>
+                    </div>
+
                 </div>
 
                 <div class="memory-card">
-                    <img src="assets/amigos.jpg" alt="Amigos da escola">
-                    <h3>Amizades</h3>
-                    <p>Pessoas que fizeram parte dessa história.</p>
+
+                    <img
+                        src="assets/amigos.jpg"
+                        alt="Amigos da escola"
+                    >
+
+                    <div class="memory-info">
+                        <h3>Amizades</h3>
+                        <p>Pessoas que fizeram parte dessa história.</p>
+                    </div>
+
                 </div>
 
                 <div class="memory-card">
-                    <img src="assets/passeio.jpg" alt="Passeio escolar">
-                    <h3>Passeios escolares</h3>
-                    <p>Experiências que ficaram na memória.</p>
+
+                    <img
+                        src="assets/passeio.jpg"
+                        alt="Passeio escolar"
+                    >
+
+                    <div class="memory-info">
+                        <h3>Passeios escolares</h3>
+                        <p>Experiências que ficaram na memória.</p>
+                    </div>
+
                 </div>
 
             </div>
+
         </section>
 
+        <!-- REDAÇÕES -->
         <section class="section" id="redacoes">
+
             <h2>Minhas redações</h2>
 
             <p class="section-description">
@@ -123,11 +185,16 @@
             </p>
 
             <div class="essay-grid" id="essayGrid">
-                <!-- As redações serão inseridas pelo JavaScript -->
+
+                <!-- O JavaScript coloca as redações aqui -->
+
             </div>
+
         </section>
 
+        <!-- ENCERRAMENTO -->
         <section class="final-section" id="final">
+
             <p class="tag">FIM DE UMA ETAPA</p>
 
             <h2>Fim de uma etapa, começo de outra</h2>
@@ -139,22 +206,38 @@
                 dessa caminhada.
             </p>
 
+            <p>
+                Agora, sigo para uma nova etapa da minha vida,
+                levando tudo aquilo que aprendi durante esses anos.
+            </p>
+
             <p class="signature">
                 Minha trajetória escolar • 2026
             </p>
+
         </section>
 
     </main>
 
+    <!-- RODAPÉ -->
     <footer>
-        <p>Feito com carinho para guardar minhas memórias escolares.</p>
+
+        <p>
+            Feito para guardar minhas memórias escolares.
+        </p>
+
     </footer>
 
-    <!-- Janela para leitura das redações -->
+    <!-- JANELA DAS REDAÇÕES -->
     <div class="modal" id="essayModal">
+
         <div class="modal-content">
 
-            <button class="close-modal" id="closeModal">
+            <button
+                class="close-modal"
+                id="closeModal"
+                aria-label="Fechar redação"
+            >
                 &times;
             </button>
 
@@ -165,9 +248,12 @@
             <div id="modalText"></div>
 
         </div>
+
     </div>
 
-    <script src="script.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
