@@ -83,66 +83,99 @@ const modal = document.getElementById("essayModal");
 const modalNumber = document.getElementById("modalNumber");
 const modalTitle = document.getElementById("modalTitle");
 const modalText = document.getElementById("modalText");
+
 const closeModal = document.getElementById("closeModal");
 
-// Criar os cartões das redações
+
+// CRIAR OS CARTÕES DAS REDAÇÕES
+
 redacoes.forEach((redacao, index) => {
+
     const card = document.createElement("div");
+
     card.classList.add("essay-card");
 
-    card.innerHTML = `
-        <span class="essay-number">
-            REDAÇÃO ${String(index + 1).padStart(2, "0")}
-        </span>
+    const numero = String(index + 1).padStart(2, "0");
 
-        <h3>${redacao.titulo}</h3>
+    const numeroRedacao = document.createElement("span");
+    numeroRedacao.classList.add("essay-number");
+    numeroRedacao.textContent = `REDAÇÃO ${numero}`;
 
-        <p>${redacao.tema}</p>
+    const titulo = document.createElement("h3");
+    titulo.textContent = redacao.titulo;
 
-        <button type="button">
-            Ler redação →
-        </button>
-    `;
+    const tema = document.createElement("p");
+    tema.textContent = redacao.tema;
 
-    card.querySelector("button").addEventListener("click", () => {
+    const botao = document.createElement("button");
+    botao.type = "button";
+    botao.textContent = "Ler redação →";
+
+    botao.addEventListener("click", () => {
         abrirRedacao(index);
     });
 
+    card.appendChild(numeroRedacao);
+    card.appendChild(titulo);
+    card.appendChild(tema);
+    card.appendChild(botao);
+
     essayGrid.appendChild(card);
+
 });
 
-// Abrir a redação selecionada
+
+// ABRIR A REDAÇÃO
+
 function abrirRedacao(index) {
+
     const redacao = redacoes[index];
 
-    modalNumber.textContent =
-        `REDAÇÃO ${String(index + 1).padStart(2, "0")}`;
+    const numero = String(index + 1).padStart(2, "0");
+
+    modalNumber.textContent = `REDAÇÃO ${numero}`;
 
     modalTitle.textContent = redacao.titulo;
 
     modalText.textContent = redacao.texto;
 
     modal.classList.add("active");
+
     document.body.style.overflow = "hidden";
+
 }
 
-// Fechar a janela
+
+// FECHAR A JANELA
+
 function fecharModal() {
+
     modal.classList.remove("active");
+
     document.body.style.overflow = "";
+
 }
 
 closeModal.addEventListener("click", fecharModal);
 
+
+// FECHAR CLICANDO FORA DA JANELA
+
 modal.addEventListener("click", (event) => {
+
     if (event.target === modal) {
         fecharModal();
     }
+
 });
 
-// Fechar apertando ESC
+
+// FECHAR APERTANDO ESC
+
 document.addEventListener("keydown", (event) => {
+
     if (event.key === "Escape") {
         fecharModal();
     }
+
 });
