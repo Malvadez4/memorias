@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha trajetória escolar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2>Minha História</h2>
+
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#memorias">Memórias</a></li>
+                <li><a href="#redacoes">Redações</a></li>
+                <li><a href="#final">Encerramento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="tag">MINHA TRAJETÓRIA</p>
+
+                <h1>Minha trajetória escolar</h1>
+
+                <p>
+                    Uma história de aprendizados, amizades e momentos
+                    que marcaram minha vida até o final do Ensino Médio.
+                </p>
+
+                <a href="#memorias" class="btn">
+                    Conhecer minhas memórias
+                </a>
+            </div>
+        </section>
+
+        <section class="section" id="historia">
+            <h2>Minha história na escola</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span>1º ao 5º ano</span>
+
+                    <h3>Escola Maringá</h3>
+
+                    <p>
+                        Foi na Escola Maringá que passei os primeiros
+                        anos do Ensino Fundamental. Não lembro de todos
+                        os detalhes dessa época, mas ela fez parte do
+                        começo da minha caminhada escolar.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <span>6º ano ao 3º ano</span>
+
+                    <h3>Colégio Estadual Padre Cláudio Morelli</h3>
+
+                    <p>
+                        No Morelli vivi uma parte muito importante da
+                        minha vida. Foi onde fiz amizades, passei por
+                        momentos engraçados, participei de passeios e
+                        construí lembranças que vou levar comigo.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="memorias">
+            <h2>Memórias escolares</h2>
+
+            <p class="section-description">
+                Alguns momentos especiais da minha caminhada.
+            </p>
+
+            <div class="memory-grid">
+
+                <div class="memory-card">
+                    <img src="assets/escola.jpg" alt="Memória da escola">
+                    <h3>Meus primeiros anos</h3>
+                    <p>O começo de uma grande caminhada.</p>
+                </div>
+
+                <div class="memory-card">
+                    <img src="assets/infancia.jpg" alt="Memória da infância">
+                    <h3>Infância</h3>
+                    <p>Momentos simples que se tornaram especiais.</p>
+                </div>
+
+                <div class="memory-card">
+                    <img src="assets/amigos.jpg" alt="Amigos da escola">
+                    <h3>Amizades</h3>
+                    <p>Pessoas que fizeram parte dessa história.</p>
+                </div>
+
+                <div class="memory-card">
+                    <img src="assets/passeio.jpg" alt="Passeio escolar">
+                    <h3>Passeios escolares</h3>
+                    <p>Experiências que ficaram na memória.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section" id="redacoes">
+            <h2>Minhas redações</h2>
+
+            <p class="section-description">
+                Os textos que fizeram parte do meu aprendizado
+                durante o Ensino Médio.
+            </p>
+
+            <div class="essay-grid" id="essayGrid">
+                <!-- As redações serão inseridas pelo JavaScript -->
+            </div>
+        </section>
+
+        <section class="final-section" id="final">
+            <p class="tag">FIM DE UMA ETAPA</p>
+
+            <h2>Fim de uma etapa, começo de outra</h2>
+
+            <p>
+                Chegar ao fim do Ensino Médio é encerrar uma fase
+                cheia de experiências. Levo comigo as amizades,
+                os aprendizados e as lembranças que fizeram parte
+                dessa caminhada.
+            </p>
+
+            <p class="signature">
+                Minha trajetória escolar • 2026
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito com carinho para guardar minhas memórias escolares.</p>
+    </footer>
+
+    <!-- Janela para leitura das redações -->
+    <div class="modal" id="essayModal">
+        <div class="modal-content">
+
+            <button class="close-modal" id="closeModal">
+                &times;
+            </button>
+
+            <p class="tag" id="modalNumber"></p>
+
+            <h2 id="modalTitle"></h2>
+
+            <div id="modalText"></div>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
