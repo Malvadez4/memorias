@@ -1,4 +1,8 @@
 
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,21 +11,28 @@
 }
 
 body {
-    background: #0d1117;
+    background-color: #0d1117;
     color: #f0f6fc;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
+
+/* =========================
+   MENU
+========================= */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: #161b22;
-    border-bottom: 1px solid #30363d;
     flex-wrap: wrap;
     gap: 15px;
+
+    padding: 20px 8%;
+
+    background-color: #161b22;
+    border-bottom: 1px solid #30363d;
 }
 
 .navbar h2 {
@@ -30,9 +41,10 @@ body {
 
 .navbar ul {
     display: flex;
-    list-style: none;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+
+    list-style: none;
 }
 
 .navbar a {
@@ -45,14 +57,25 @@ body {
     color: #a3e635;
 }
 
+
+/* =========================
+   INÍCIO
+========================= */
+
 .hero {
     min-height: 80vh;
+
     display: flex;
     align-items: center;
+
     padding: 60px 10%;
+
     background:
-        radial-gradient(circle at top right, #1c2b17, transparent 45%),
-        #0d1117;
+        radial-gradient(
+            circle at top right,
+            #1c2b17,
+            #0d1117 60%
+        );
 }
 
 .hero-content {
@@ -64,35 +87,49 @@ body {
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
+
     margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size: clamp(36px, 6vw, 65px);
+    font-size: 55px;
+    line-height: 1.2;
+
     margin-bottom: 20px;
 }
 
 .hero p {
     color: #b1bac4;
     font-size: 18px;
+
     margin-bottom: 25px;
 }
 
 .btn {
     display: inline-block;
-    background: #a3e635;
+
+    background-color: #a3e635;
     color: #0d1117;
+
     padding: 13px 22px;
+
     border-radius: 8px;
+
     text-decoration: none;
     font-weight: bold;
+
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #8cc51f;
+    background-color: #8cc51f;
     transform: translateY(-3px);
 }
+
+
+/* =========================
+   SEÇÕES
+========================= */
 
 .section {
     padding: 80px 8%;
@@ -109,8 +146,14 @@ body {
     margin-bottom: 30px;
 }
 
+
+/* =========================
+   HISTÓRIA ESCOLAR
+========================= */
+
 .timeline {
     border-left: 2px solid #a3e635;
+
     padding-left: 25px;
     margin-top: 30px;
 }
@@ -122,12 +165,16 @@ body {
 
 .timeline-item::before {
     content: "";
+
     position: absolute;
+
     left: -33px;
     top: 8px;
+
     width: 14px;
     height: 14px;
-    background: #a3e635;
+
+    background-color: #a3e635;
     border-radius: 50%;
 }
 
@@ -146,24 +193,32 @@ body {
     max-width: 750px;
 }
 
-.memory-grid,
-.essay-grid {
+
+/* =========================
+   MEMÓRIAS
+========================= */
+
+.memory-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
     gap: 20px;
 }
 
-.memory-card,
-.essay-card {
-    background: #161b22;
+.memory-card {
+    background-color: #161b22;
+
     border: 1px solid #30363d;
     border-radius: 12px;
+
     overflow: hidden;
+
     transition: 0.3s;
 }
 
-.memory-card:hover,
-.essay-card:hover {
+.memory-card:hover {
     transform: translateY(-5px);
     border-color: #a3e635;
 }
@@ -171,27 +226,52 @@ body {
 .memory-card img {
     width: 100%;
     height: 190px;
+
     object-fit: cover;
     display: block;
 }
 
-.memory-card h3,
-.memory-card p {
-    padding: 0 18px;
+.memory-info {
+    padding: 15px 18px 20px;
 }
 
-.memory-card h3 {
-    margin-top: 15px;
+.memory-info h3 {
+    margin-bottom: 8px;
 }
 
-.memory-card p {
+.memory-info p {
     color: #9ca3af;
-    padding-bottom: 20px;
     font-size: 14px;
 }
 
+
+/* =========================
+   REDAÇÕES
+========================= */
+
+.essay-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
 .essay-card {
+    background-color: #161b22;
+
+    border: 1px solid #30363d;
+    border-radius: 12px;
+
     padding: 22px;
+
+    transition: 0.3s;
+}
+
+.essay-card:hover {
+    transform: translateY(-5px);
+    border-color: #a3e635;
 }
 
 .essay-number {
@@ -208,31 +288,42 @@ body {
 .essay-card p {
     color: #9ca3af;
     font-size: 14px;
+
     margin-bottom: 18px;
 }
 
 .essay-card button {
-    background: transparent;
+    background: none;
     border: none;
+
     color: #a3e635;
     font-size: 15px;
-    cursor: pointer;
     font-weight: bold;
+
+    cursor: pointer;
 }
 
 .essay-card button:hover {
     text-decoration: underline;
 }
 
+
+/* =========================
+   ENCERRAMENTO
+========================= */
+
 .final-section {
     text-align: center;
+
     padding: 90px 10%;
-    background: #161b22;
+
+    background-color: #161b22;
     border-top: 1px solid #30363d;
 }
 
 .final-section p {
     color: #b1bac4;
+
     max-width: 700px;
     margin: 0 auto 20px;
 }
@@ -242,37 +333,63 @@ body {
     margin-top: 30px;
 }
 
+
+/* =========================
+   RODAPÉ
+========================= */
+
 footer {
     text-align: center;
+
     padding: 25px;
+
     color: #6e7681;
     font-size: 13px;
 }
 
+
+/* =========================
+   JANELA DAS REDAÇÕES
+========================= */
+
 .modal {
     display: none;
+
     position: fixed;
     z-index: 1000;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
     padding: 20px;
     overflow-y: auto;
 }
 
 .modal.active {
     display: flex;
+
     justify-content: center;
     align-items: flex-start;
 }
 
 .modal-content {
-    background: #161b22;
+    background-color: #161b22;
+
     border: 1px solid #30363d;
     border-radius: 15px;
+
     padding: 35px;
+
     max-width: 800px;
     width: 100%;
+
     margin: 30px auto;
+
     position: relative;
 }
 
@@ -283,21 +400,32 @@ footer {
 .modal-content p {
     color: #c9d1d9;
     margin-bottom: 18px;
+
     white-space: pre-line;
 }
 
 .close-modal {
     position: absolute;
+
     top: 10px;
     right: 18px;
-    background: transparent;
+
+    background: none;
     border: none;
+
     color: #f0f6fc;
     font-size: 32px;
+
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media screen and (max-width: 600px) {
+
     .navbar {
         flex-direction: column;
     }
@@ -312,12 +440,25 @@ footer {
         padding: 50px 7%;
     }
 
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
     .section {
         padding: 55px 7%;
+    }
+
+    .section h2,
+    .final-section h2 {
+        font-size: 27px;
     }
 
     .modal-content {
         padding: 25px 18px;
     }
-}
 
+}
